@@ -9,7 +9,7 @@ function readFromFile(fileName){
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(readFileSync("index.html"));
+  response.send(readFromFile("index.html"));
 });
 
 var port = process.env.PORT || 5000;
