@@ -1,8 +1,8 @@
 var express = require('express');
 var fs = require('fs');
 
-var fileContents = function(){{
-    fs.readFileSync('index.html')
+function fileContents {
+    return fs.readFileSync('index.html', "utf8");
 }
 
 function readFromFile(fileName){
