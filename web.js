@@ -4,7 +4,7 @@ var Buffer =  require('buffer').Buffer;
 
 function readFromFile(fileName){
     var buffer = fs.readFileSync(fileName);
-    return buffer.toString;
+    return buffer.toString("utf8");
 }
 
 
