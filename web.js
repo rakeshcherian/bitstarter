@@ -1,8 +1,10 @@
 var express = require('express');
 var fs = require('fs');
+var Buffer =  require('buffer').Buffer;
 
 function readFromFile(fileName){
-    return fs.readFileSync(fileName,"utf8");
+    var buffer = fs.readFileSync(fileName);
+    return buffer.toString;
 }
 
 
