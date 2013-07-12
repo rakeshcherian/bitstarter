@@ -1,6 +1,10 @@
 var express = require('express');
 var fs = require('fs');
 
+var fileContents = {
+    fs.readFileSync('index.html')
+}
+
 function readFromFile(fileName){
     return fs.readFileSync(fileName).toString;
 }
@@ -9,7 +13,7 @@ function readFromFile(fileName){
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(readFromFile('index.html').toString());
+  response.send(fileContents.toString());
 });
 
 var port = process.env.PORT || 5000;
